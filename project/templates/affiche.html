@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+<div class="column is-4 is-offset-4">
+  <h1 class="title">Les utilisateurs :</h1>
+  {% for user in users %}
+
+  <div class="box m-10 ">
+    
+      <div class="content">
+        <p><b>{{ user.id }}</b></p>
+        <b>
+          <p class="name">{{ user.name }}</p>
+        </b>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
