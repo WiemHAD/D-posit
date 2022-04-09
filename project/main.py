@@ -14,7 +14,7 @@ def index():
     return render_template('index.html')
 @main.route('/affiche')
 def affiche():
-    users=User.query.all()
+    users = User.query.all()
     return render_template('affiche.html',users=users)
 
 @main.route('/profile')

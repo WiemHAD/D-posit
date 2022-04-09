@@ -4,7 +4,6 @@ from flask_login import LoginManager
 from flask_admin import Admin 
 from flask_admin.contrib.sqla import ModelView
 
-
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
 
@@ -14,9 +13,9 @@ def create_app():
     app.config['SECRET_KEY'] = 'secret-key-goes-here'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
-# set optional bootswatch theme
+    # set optional bootswatch theme
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 
     from .models import User, Result

@@ -6,10 +6,10 @@ from sklearn.preprocessing import LabelEncoder
 import pickle
 from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
-import xgboost as xgb
+#import xgboost as xgb
 import sklearn
 from . import db
-from .models import Result , Info
+from .models import Result, Info
 
 
 predict = Blueprint('predict', __name__)
@@ -66,7 +66,7 @@ def predict_post():
     
     #reshaped_array = user_df.reshape(1,-1)
 
-    filename = "project/preprocessor1.sav"
+    filename = "preprocessor2.sav"
     
     my_preprocessor= pickle.load(open(filename,"rb"))
     #user_fit = my_preprocessor.fit(reshaped_array)
