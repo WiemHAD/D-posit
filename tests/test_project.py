@@ -14,7 +14,7 @@ class ProjetUnitTest(unittest.TestCase):
 	def test_main_page(self):
 		response = self.test_app.get('/')
 		assert response.status_code == 200
-		assert b"Flask Login Example" in response.data
+		assert b"D-POSIT" in response.data
 
 	def test_affiche_page(self):
 		response = self.test_app.get('/affiche')

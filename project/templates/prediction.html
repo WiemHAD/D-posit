@@ -1,19 +1,16 @@
 {% extends "base.html" %} {% block content %}
 <div class="column is-4 is-offset-4">
+ <h1 class="subtitle"> Please write your client informations: </h1>
   <div class="box">
     <form method="POST" action="/predict">
+   
       <div class="field">
+      
         <div class="control">
+        
           <label>Age :</label>
 
-          <input
-            required
-            id="age"
-            class="input is-large"
-            type="number"
-            name="age"
-            placeholder="Age"
-            autofocus=""
+          <input required id="age" class="input is-large" type="number" name="age" placeholder="Age" autofocus=""
           />
         </div>
       </div>
@@ -40,24 +37,30 @@
 
       <div class="field">
         <div class="control">
-          <label for="marital_status">Marital Status :</label>
-          <select
-            required
-            class="input is-large"
-            required
-            class="input is-large"
-            name="education"
-            id="education"
-          >
+          <label for="education">Education :</label>
+          <select class="input is-large" required name="education" id="education">
             <option value="option">Choose an option</option>
-            <option value="basic.4y">basic.4y</option>
-            <option value="basic.6y">basic.6y</option>
-            <option value="basic.9y">basic.9y</option>
-            <option value="high.school">high.school</option>
-            <option value="illiterate">illiterate</option>
-            <option value="professional.course">professional.course</option>
-            <option value="university.degree">university.degree</option>
-            <option value="unknown">unknown</option>
+            <option value="university.degree">University Degree</option>
+            <option value="high.school">High School</option>
+            <option value="basic.9y">Basic 9y</option>
+            <option value="professional.course">Professional Course</option>
+            <option value="basic.4y">Basic 4y</option>
+            <option value="basic.6y">Basic 6y</option>
+            <option value="unknown">Unknown</option>
+            <option value="illiterate">Illiterate </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label for="marital_status">Marital Status :</label>
+          <select required class="input is-large" name="marital_status" id="marital_status">
+            <option value="option">Choose an option</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+            <option value="single">Single</option>
+            <option value="unknown">Unknown</option>
           </select>
         </div>
       </div>
@@ -75,12 +78,7 @@
       <div class="field">
         <div class="control">
           <label for="housing_loan">Housing Loan :</label>
-          <select
-            required
-            class="input is-large"
-            name="housing_loan"
-            id="housing_loan"
-          >
+          <select required class="input is-large" name="housing_loan" id="housing_loan">
             <option value="option">Choose an option</option>
             <option value="yes">yes</option>
             <option value="no">no</option>
@@ -91,12 +89,7 @@
       <div class="field">
         <div class="control">
           <label for="personal_loan">Personal Loan :</label>
-          <select
-            required
-            class="input is-large"
-            name="personam_loan"
-            id="personal_loan"
-          >
+          <select required class="input is-large" name="personal_loan" id="personal_loan">
             <option value="option">Choose an option</option>
             <option value="yes">yes</option>
             <option value="no">no</option>
@@ -119,45 +112,47 @@
           <label for="Month">Month :</label>
           <select required class="input is-large" name="month" id="month">
             <option value="option">Choose an option</option>
-            <option value="jan">Jan</option>
-            <option value="fev">Feb</option>
-            <option value="mar">Mar</option>
-            <option value="apr">Apr</option>
             <option value="may">May</option>
-            <option value="jun">Jun</option>
-            <option value="jul">Jul</option>
-            <option value="aug">Aug</option>
-            <option value="sep">Sep</option>
-            <option value="oct">Oct</option>
-            <option value="nov">Nov</option>
-            <option value="dec">Dec</option>
+            <option value="jun">June</option>
+            <option value="jul">July</option>
+            <option value="aug">Auguest</option>
+            <option value="oct">October</option>
+            <option value="nov">November</option>
+            <option value="dec">December</option>
+            <option value="mar">March</option>
+            <option value="apr">April</option>
+            <option value="sep">September</option>
           </select>
         </div>
       </div>
       <div class="field">
         <div class="control">
-          <label for="day">Day of the Week :</label>
-          <select required class="input is-large" name="day" id="day">
+          <label for="day_of_week">Day of the Week :</label>
+          <select required class="input is-large" name="day_of_week" id="day_of_week">
             <option value="option">Choose an option</option>
-            <option value="mon">Mon</option>
-            <option value="tue">Tue</option>
-            <option value="wed">Wed</option>
-            <option value="thu">Thu</option>
-            <option value="fri">Fri</option>
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
           </select>
         </div>
       </div>
 
+      <div class="field">
+        <div class="control">
+          <label for="poutcome">Outcome of previous compaign :</label>
+          <select required class="input is-large" name="poutcome" id="poutcome">
+            <option value="option">Choose an option</option>
+            <option value="nonexistent">Nonexistent</option>
+            <option value="failure">Failure</option>
+            <option value="success">Success</option>
+          </select>
+        </div>
+      </div>
       <div class="control">
         <label>Duration :</label>
-        <input
-          required
-          class="input is-large"
-          type=""
-          name="duration"
-          placeholder="Duration"
-          autofocus=""
-        />
+        <input required class="input is-large" name="duration" placeholder="Duration" autofocus=""/>
       </div>
 
       <button class="button is-block is-info is-large is-fullwidth">

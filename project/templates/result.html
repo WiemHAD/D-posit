@@ -3,15 +3,18 @@
 {% block content %}
 <div>
 
-  {% with messages = get_flashed_messages() %} {% if messages %}
-  <div class="notification is-danger">{{ messages[1] }}</div>
-  {% endif %} {% endwith %}
+
   <h1 class="title">
-    Resultat
+    Result:
    </h1>
+   {% with messages = get_flashed_messages() %} {% if messages %}
+  <div class="notification is-danger">{{ messages[0] }}</div>
+  {% endif %} {% endwith %}
+  
    <h2 class="subtitle">
-     Selon le model prédictif: </br> {{value}}
+     According to your predictive model </br> {{value}}
    </h2>
 </div>
 
 {% endblock %}
+

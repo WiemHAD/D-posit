@@ -34,6 +34,7 @@ def login_post():
     login_user(user,remember=remember)
 
     return redirect(url_for('main.profile'))
+
 @auth.route('/signup', methods=['POST'])
 def signup_post():
     # code to validate and add user to database goes here

@@ -18,13 +18,14 @@ def create_app():
     # set optional bootswatch theme
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 
-    from .models import User, Result
+    from .models import User, Result, Vecteurs
 
 
 
     admin = Admin(app, name='microblog', template_mode='bootstrap3')
     admin.add_view(ModelView(User, db.session))
     admin.add_view(ModelView(Result, db.session))
+    admin.add_view(ModelView(Vecteurs, db.session))
     
     
 
